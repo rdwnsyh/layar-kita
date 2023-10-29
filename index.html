@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Layar Kita</title>
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script>if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }</script>
+</head>
+<body>
+    <!-- header start -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#home" class="font-bold text-lg text-primary block py-6">Layar Kita🍿</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+
+                    <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:dark:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-dark dark:shadow-slate-500 lg:bg-transparent">
+                        <ul class="block lg:flex">
+                            <li class="group">
+                                <a href="#home" class="text-base text-dark py-2 mx-8 group-hover:text-primary dark:text-white flex">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#cari" class="text-base text-dark py-2 mx-8 group-hover:text-primary dark:text-white flex">Cari Film</a>
+                            </li>
+                            <li class="mt-1 flex items-center pl-8">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-slate-500">Light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">Dark</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- Hero section start -->
+    <section id="home" class="pt-36 pb-16 dark:bg-dark">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full self-center px-4 lg:w-1/2">
+                    <h1 class="text-base font-semibold text-dark md:text-xl dark:text-white">Cari Film Yang Seru? Cari di <span class="block font-bold text-primary  text-4xl mt-1 lg:text-5xl">Layar Kita🍿</span></h1>
+                    <h2 class="font-medium text-slate-500 text-lg mb-5 lg:text-2xl">Temukan <span class="text-dark dark:text-white">Hiburan Terbaikmu!</span> </h2>
+                    <p class="font-medium text-slate-500 mb-10 leading-relaxed">Cari, Temukan, Nikmati <span class="text-dark font-semibold dark:text-white">Film Kesukaanmu!</span> </p>
+
+                    <a href="#cari" class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Cari Film Sekarang</a>
+                </div>
+                <div class="w-full self-end px-4 lg:w-1/2">
+                    <div class="relative mt-10 lg:mt-9 lg:right-0">
+                        <img src="dist/img/tv.png" alt="tv" class="max-w-full mx-auto relative z-10" width="400px">
+                        <span class="absolute -bottom-0 left-1/2 -translate-x-1/2 md:scale-125"><svg width="450" height="450" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#14b8a6" d="M41.2,-66.8C54.1,-63.9,65.8,-54.3,68,-42.1C70.1,-29.8,62.8,-14.9,64.1,0.8C65.4,16.4,75.4,32.8,71.5,42.1C67.6,51.4,49.9,53.5,35.6,59C21.4,64.5,10.7,73.4,1.1,71.4C-8.4,69.4,-16.9,56.6,-26.2,48.3C-35.5,40,-45.7,36.1,-56.8,28.8C-67.9,21.5,-79.9,10.8,-78.6,0.8C-77.3,-9.3,-62.7,-18.5,-55.6,-32.8C-48.6,-47.1,-49,-66.3,-41,-72C-33,-77.7,-16.5,-69.9,-1.2,-67.8C14.1,-65.8,28.3,-69.7,41.2,-66.8Z" transform="translate(100 100)" scale(1.2)/>
+                          </svg></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero section end -->
+
+    <!-- Search film start -->
+    <section id="cari" class="pt-36 pb-16 bg-slate-100 dark:bg-slate-800">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Film</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 dark:text-white">Cari Film Yang Seru</h2>
+                </div>
+                <!-- search button -->
+                <div class="w-full pb-16 flex flex-col items-center justify-center">
+                    <div class="w-11/12 h-auto md:w-8/12 xl:w-1/2 bg-white p-5 rounded-3xl">
+                        <!-- section pertama -->
+                        <section class="w-full h-10 flex items-center">
+                            <!-- search bar icon -->
+                            <span class="w-10 h-full  flex items-center">
+                                <i class="fa-solid fa-magnifying-glass text-primary"></i>
+                            </span>
+                            <!-- input -->
+                            <input type="text" class="input-keyword w-full h-full font-medium md:pl-2 focus:outline-none" placeholder="Cari film......">
+                            <!-- search button -->
+                            <button class="search-button w-28 h-full bg-primary flex justify-center items-center rounded-2xl text-white font-medium hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Search</button>
+                        </section>
+                    </div>
+                </div>
+                <!-- cards start-->
+                <div class="container">
+                    <div class="movie-card flex flex-wrap">
+                        
+                    </div>
+                </div>
+                <!-- cards end -->
+            </div>
+        </div>
+    </section>
+    <!-- Search film end -->
+
+    <!-- Modal start -->
+    <div class="container">
+        <input type="checkbox" id="tw-modal" class="peer fixed appearance-none opacity-0">
+        <!-- modal -->
+
+            <label for="tw-modal" class="tw-modal modal-body pointer-events-none invisible fixed inset-0 flex cursor-pointer items-center justify-center overflow-hidden
+            overscroll-contain bg-slate-700/30 opacity-0 transition-all duration-200 ease-in-out peer-checked:pointer-events-auto peer-checked:visible
+            peer-checked:opacity-100 peer-checked:[&>*]:translate-y-0 peer-checked:[&>*]:scale-100">
+            <!-- modal box -->
+    </div>
+        
+    <!-- Modal end -->
+
+    <!-- Footer start -->
+    <footer class="bg-dark pt-24 pb-12">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/3">
+                    <h2 class="font-bold text-4xl text-white mb-5">Layar Kita</h2>
+                    <h3 class="font-bold text-2xl mb-2">Hubungi Kami</h3>
+                    <p>layarkaca@gmail.com</p>
+                    <p>Jl. Parigilame No. 20</p>
+                    <p>Bandung</p>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5">Butuh Bantuan?</h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="" class="inline-block text-base hover:text-primary mb-3">Bantuan</a>
+                        </li>
+                        <li>
+                            <a href="" class="inline-block text-base hover:text-primary mb-3">Masukan</a>
+                        </li>
+                        <li>
+                            <a href="" class="inline-block text-base hover:text-primary mb-3"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white mb-5">Tautan</h3>
+                    <ul class="text-slate-300">
+                        <li>
+                            <a href="#home" class="inline-block text-base hover:text-primary mb-3">Beranda</a>
+                        </li>
+                        <li>
+                            <a href="#cari" class="inline-block text-base hover:text-primary mb-3">Cari Film</a>
+                        </li>
+                        <li>
+                            <a href="" class="inline-block text-base hover:text-primary mb-3"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div class="w-full flex pt-10 justify-center border-t border-slate-600">
+                <div class="flex  items-center justify-center mb-5">
+                    <a href="https://www.youtube.com/channel/UCto2IXF4wQUlRpfFio_Ciew" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <img src="dist/img/youtube.svg" alt="youtube">
+                    </a>
+                </div>
+                <div class="flex  items-center justify-center mb-5">
+                    <a href="https://www.instagram.com/risyadrdwnsyh/" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <img src="dist/img/instagram.svg" alt="instagram">
+                    </a>
+                </div>
+                <div class="flex  items-center justify-center mb-5">
+                    <a href="https://www.facebook.com/risyad.ridwansyah.1" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <img src="dist/img/facebook.svg" alt="facebook">
+                    </a>
+                </div>
+                <div class="flex items-center justify-center mb-5">
+                    <a href="https://github.com/rdwnsyh" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <img src="dist/img/github.svg" alt="github">
+                    </a>
+                </div>
+            </div>
+            <p class="font-medium text-sm text-slate-500 text-center">Dibuat oleh Layar Kita 2023</p>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- back top top start -->
+    <a href="#home" id="to-top" class="hidden h-14 w-14 justify-center items-center bg-primary p-4 rounded-full fixed z-[9999] bottom-4 right-4 hover:animate-pulse">
+        <!-- <span class="block h-5 w-5 border-t-2 border-l-2 rotate-45  mt-2"></span> -->
+        <img src="dist/img/arrow-up.svg" alt="arrow">
+    </a>
+    <!-- back top top end -->
+
+    <script src="dist/js/script.js"></script>
+</body>
+</html>
