@@ -58,7 +58,7 @@ const searchButton = document.querySelector('.search-button');
 searchButton.addEventListener('click', function () {
 
     const inputKeyword = document.querySelector('.input-keyword')
-    fetch('http://www.omdbapi.com/?apikey=7a91537c&s=' + inputKeyword.value)
+    fetch('https://www.omdbapi.com/?apikey=7a91537c&s=' + inputKeyword.value)
     .then(response => response.json())
     .then(response => {
         const movies = response.Search;
