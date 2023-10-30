@@ -85,6 +85,15 @@ searchButton.addEventListener('click', function () {
     });
 });
 
+// ketika tombol close di klick
+const closeButton = document.getElementById('closeButton');
+const elementToClose = document.getElementById('tw-modal'); // Ganti 'elementToClose' dengan ID elemen yang ingin Anda tutup
+
+  closeButton.addEventListener('click', function() {
+    if (elementToClose) {
+      elementToClose.style.display = 'none'; // Menyembunyikan elemen dengan mengubah properti tampilan menjadi 'none'
+    }
+  }); 
 
 function showCards(m) {
     return `<div class="w-full px-4 lg:w-1/2 xl:w-1/3 ">
@@ -100,7 +109,7 @@ function showCards(m) {
 }
 
 function showMovieDetail(m) {
-    return `<label id="tw-modal" class="dark:bg-slate-700 max-h-[calc(100vh - 5em)] max-w-lg scale-90 overflow-y-auto overscroll-contain rounded-md bg-white p-6 text-black
+    return `<label id="tw-modal" class="dark:bg-slate-700 max-h-sm max-w-lg scale-90 overflow-y-auto overscroll-contain rounded-md bg-white p-6 text-black
     shadow-2xl transition">
             <div>
                 <div class="mt-6 border-t border-gray-100">
@@ -127,7 +136,6 @@ function showMovieDetail(m) {
                     <button id="closeButton" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full focus:outline-none">
                     Close
                     </button>
-
                     </div>
                 </dl>
                 </div>
